@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Fake Filler",
+    "version": "1.0.0",
+    "description": "Fill forms with fake data for testing purposes",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://localhost:5000/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Fake Filler"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
